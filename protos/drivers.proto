@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package demo;
+
+service DriverService {
+    rpc getById(GetByIdRequest) returns (Driver) {}
+}
+
+message GetByIdRequest {
+    int32 id = 1;
+}
+
+message Driver {
+
+//    Name
+    string name = 1;
+
+//    Phone number
+    string phoneNumber = 2;
+}
